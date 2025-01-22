@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+detailed page
+{% endblock %}
+
+{% block body %}
+
+<img src="{{ url_for('static', filename='images/' + product['img']) }}">
+
+<P>
+    სახელი:{{ product['name'] }}
+</P>
+<P>
+  ფასი: {{ product ['price'] }}
+</P>
+
+
+{% endblock %}

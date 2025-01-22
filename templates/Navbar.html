@@ -1,0 +1,37 @@
+
+
+<nav class="navbar navbar-expand-lg bg-custom">
+    <div class="container-md ">
+        <a class="navbar-brand" href="/">BOOK lover</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </li>
+
+            </ul>
+            <div>
+            <a href="https://www.tbceducation.ge/"> <img src="https://play-lh.googleusercontent.com/jDZey_jeFRaVFKRBgaS3mWtrEP8S8DPRl-B4YijVGf-OxcN6dAB8j7AyDddlvAZN4nOM" alt="" width="46" height="46"></a>
+            </div>
+            <div class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+
+                {% if current_user.is_authenticated %}
+                <div class=btn-group>
+                    <a class="btn btn-outline-dark" type="submit" href="/logout">Logout</a></div>
+                <a class="btn btn-outline-dark" type="submit" href="/my_posts">Posts</a></div>
+        </div>
+    </div>
+    {% else %}
+    <div class=btn-group>
+        <a class="btn btn-outline-dark" type="submit" href="/login">Login</a>
+        <a class="btn btn-outline-dark" type="submit" href="/register">register</a>
+    </div>
+    {% endif %}
+
+</nav>
